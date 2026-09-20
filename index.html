@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALMate.edu.lk | GCE A/L Resources</title>
+<meta name="description" content="ALMate.edu.lk — GCE A/L Past Papers and Marking Schemes for Sri Lankan students.">
+
+<style>
+:root{
+  --navy:#071a33;
+  --navy2:#0c2850;
+  --green:#08a66a;
+  --green2:#18c27d;
+  --blue:#2878ff;
+  --purple:#7957ff;
+  --orange:#ff9d3f;
+  --pink:#ef5da8;
+  --text:#10233f;
+  --muted:#64748b;
+  --line:#e4ebf4;
+  --soft:#f5f8fc;
+  --white:#fff;
+  --shadow:0 18px 60px rgba(15,40,75,.11);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  color:var(--text);background:#fff;line-height:1.6;overflow-x:hidden
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;
+  background:
+    radial-gradient(circle at 10% 10%,rgba(40,120,255,.07),transparent 28%),
+    radial-gradient(circle at 90% 25%,rgba(8,166,106,.07),transparent 28%),
+    radial-gradient(circle at 50% 90%,rgba(121,87,255,.06),transparent 30%)
+}
+a{text-decoration:none;color:inherit}
+img{max-width:100%}
+.container{max-width:1200px;margin:auto;padding:0 6%}
+.site-header{
+  position:sticky;top:0;z-index:1000;height:72px;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 6%;background:rgba(255,255,255,.9);backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(220,230,240,.8)
+}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:18px}
+.brand img{width:43px;height:43px;border-radius:13px;object-fit:cover}
+.nav{display:flex;gap:22px;color:#50627a;font-size:14px;font-weight:800}
+.nav a{position:relative}.nav a:after{content:"";position:absolute;left:0;bottom:-7px;width:0;height:2px;background:var(--green);transition:.3s}
+.nav a:hover:after{width:100%}
+
+.hero{
+  min-height:690px;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;
+  padding:70px 6% 55px;max-width:1280px;margin:auto
+}
+.hero-copy{animation:fadeUp .9s ease both}
+.eyebrow{font-size:11px;letter-spacing:.19em;font-weight:900;color:var(--green);margin-bottom:12px}
+.hero h1{font-size:clamp(44px,6vw,78px);line-height:1.02;letter-spacing:-.055em;margin-bottom:22px}
+.hero h1 .accent{
+  background:linear-gradient(90deg,var(--green),var(--blue),var(--purple));
+  -webkit-background-clip:text;background-clip:text;color:transparent
+}
+.hero-desc{font-size:18px;color:var(--muted);max-width:600px}
+.hero-buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{
+  min-height:48px;padding:0 20px;border-radius:13px;display:inline-flex;align-items:center;justify-content:center;
+  font-size:13px;font-weight:900;border:1px solid var(--line);transition:.25s ease;cursor:pointer
+}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(20,50,90,.14)}
+.btn-primary{background:linear-gradient(135deg,#07895f,#10b976);color:white;border-color:transparent}
+.btn-blue{background:linear-gradient(135deg,#2268ed,#4c91ff);color:white;border-color:transparent}
+.btn-wa{background:#18b967;color:#fff;border-color:#18b967}
+.btn-light{background:#fff}
+.hero-art{position:relative;animation:zoomIn 1s .1s ease both}
+.hero-art:before{
+  content:"";position:absolute;inset:-15px;border-radius:38px;
+  background:linear-gradient(135deg,rgba(8,166,106,.18),rgba(40,120,255,.12),rgba(121,87,255,.12));
+  filter:blur(18px);z-index:-1;animation:pulseGlow 4s ease-in-out infinite
+}
+.hero-art img{display:block;width:100%;border-radius:30px;box-shadow:var(--shadow)}
+
+.stats{max-width:1120px;margin:0 auto 35px;padding:0 6%;display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{text-align:center;padding:24px 15px;border-right:1px solid var(--line);animation:fadeUp .7s ease both}
+.stat:last-child{border-right:0}.stat strong{display:block;font-size:32px;color:var(--navy)}.stat span{font-size:12px;color:#718096;font-weight:700}
+
+.section{max-width:1220px;margin:auto;padding:82px 6%}
+.soft{max-width:none;background:linear-gradient(180deg,#f7faff,#f4f8fc)}
+.section-head{text-align:center;max-width:820px;margin:0 auto 38px}
+.section h2{font-size:clamp(31px,4vw,47px);line-height:1.08;letter-spacing:-.035em;margin-bottom:13px}
+.section-head>p:last-child{color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{
+  position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:20px;padding:27px;
+  box-shadow:0 9px 35px rgba(20,50,80,.05);transition:.3s ease
+}
+.card:before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--blue),var(--purple))}
+.card:hover{transform:translateY(-7px);box-shadow:var(--shadow)}
+.icon{font-size:28px}.card h3{margin:12px 0 5px}.card p{color:var(--muted);font-size:14px}
+
+.request-grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:1.15fr .85fr;gap:20px}
+.steps{display:grid;gap:11px}.step{
+  display:flex;align-items:center;gap:16px;background:#fff;border:1px solid var(--line);border-radius:17px;padding:18px 20px;
+  box-shadow:0 8px 28px rgba(20,50,80,.04);transition:.25s
+}.step:hover{transform:translateX(5px)}
+.step b{display:grid;place-items:center;min-width:38px;height:38px;border-radius:50%;background:#e8f8f1;color:#087d59;font-size:12px}
+.example{background:linear-gradient(145deg,#fff,#f7fbff);border:1px solid var(--line);border-radius:20px;padding:27px;display:flex;flex-direction:column;justify-content:center;gap:14px;box-shadow:var(--shadow)}
+.example small{color:#75859a;font-weight:800}.example code{background:#eff4f8;border-radius:10px;padding:13px;font-size:12px;overflow:auto}
+
+.subjects{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.subject{
+  display:flex;align-items:center;gap:11px;border:1px solid var(--line);border-radius:13px;padding:11px 14px;background:#fff;
+  transition:.22s
+}
+.subject:hover{transform:translateY(-2px);border-color:#b7d8ef;box-shadow:0 7px 20px rgba(30,80,130,.07)}
+.subject b{display:grid;place-items:center;min-width:30px;height:30px;border-radius:9px;background:#edf4ff;color:#2d6fe8;font-size:10px}
+
+.notice{
+  max-width:1050px;margin:auto;border-radius:20px;padding:25px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow)
+}
+.notice p{margin:8px 0;color:#55687e;font-size:14px}
+
+.ai{
+  max-width:900px;margin:auto;text-align:center;padding:42px 30px;border-radius:25px;
+  background:linear-gradient(135deg,#eefaf5,#f4f7ff,#faf6ff);border:1px solid var(--line);box-shadow:var(--shadow);
+  position:relative;overflow:hidden
+}
+.ai:after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;background:rgba(40,120,255,.08);right:-50px;top:-60px;animation:float 5s ease-in-out infinite}
+.status{display:inline-flex;padding:7px 14px;border-radius:99px;background:#e5f8ef;color:#087c58;font-size:11px;font-weight:900;margin:8px 0 15px}
+.ai p:last-child{max-width:680px;margin:auto;color:var(--muted)}
+
+.founder{display:grid;grid-template-columns:280px 1fr;gap:48px;align-items:center;max-width:920px;margin:auto}
+.founder-photo img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:50%;box-shadow:var(--shadow);transition:.4s}
+.founder-photo:hover img{transform:scale(1.03) rotate(1deg)}
+.founder-copy>p:not(.eyebrow){color:var(--muted);margin-bottom:17px}
+.founder-channel{margin-top:23px;padding:21px;border:1px solid var(--line);border-radius:18px;background:#f8fbfd}
+.founder-channel h3{margin-bottom:2px}.founder-channel p{color:var(--muted);font-size:13px;margin-bottom:13px}
+
+.support-box{
+  border-radius:25px;padding:35px;background:linear-gradient(135deg,#f7fbff,#f1fbf7);
+  border:1px solid var(--line);box-shadow:var(--shadow)
+}
+.support-box h2{margin-bottom:9px}.support-box>p{color:var(--muted);max-width:700px}
+.support-buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.mini-note{font-size:12px;color:#738399;margin-top:13px}
+
+.ad-box{
+  margin-top:18px;border-radius:22px;padding:27px;background:#071a33;color:#fff;position:relative;overflow:hidden;
+  box-shadow:var(--shadow)
+}
+.ad-box:before{content:"";position:absolute;width:230px;height:230px;border-radius:50%;right:-80px;top:-100px;background:rgba(24,194,125,.17)}
+.ad-box h3{font-size:24px;margin-bottom:7px}.ad-box p{color:#c9d5e5;max-width:780px;font-size:14px}
+.ad-list{display:flex;flex-wrap:wrap;gap:9px;margin:17px 0}.ad-tag{padding:7px 10px;border-radius:99px;background:rgba(255,255,255,.09);font-size:11px;color:#e6edf7}
+
+.profile-card{margin-top:18px;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px;border:1px solid var(--line);border-radius:19px;background:#fff}
+.profile-card p{color:var(--muted);font-size:13px}
+
+footer{display:flex;justify-content:space-between;gap:20px;padding:30px 6%;background:#06182e;color:#dbe7f3;font-size:12px}
+footer strong{color:#fff}
+
+.wa-popup{
+  position:fixed;right:20px;bottom:20px;z-index:2000;width:min(400px,calc(100% - 28px));
+  display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;padding:17px 18px;
+  background:#fff;border:1px solid #dfe7ef;border-radius:20px;box-shadow:0 24px 70px rgba(0,0,0,.2);
+  opacity:0;transform:translateY(30px) scale(.96);pointer-events:none;transition:.4s cubic-bezier(.2,.8,.2,1)
+}
+.wa-popup.show{opacity:1;transform:translateY(0) scale(1);pointer-events:auto}
+.wa-icon{width:43px;height:43px;border-radius:50%;display:grid;place-items:center;background:#18b967;color:#fff;font-size:20px}
+.wa-popup strong{font-size:14px;display:block}.wa-popup small{display:block;color:#718096;font-size:11px}
+.wa-popup>a{background:#18b967;color:#fff;border-radius:11px;padding:9px 13px;font-size:12px;font-weight:900}
+.popup-close{position:absolute;right:7px;top:3px;border:0;background:transparent;font-size:20px;color:#8190a2;cursor:pointer}
+.popup-progress{position:absolute;left:0;bottom:0;height:3px;background:#18b967;width:100%;transform-origin:left}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+@keyframes fadeUp{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}
+@keyframes zoomIn{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:scale(1)}}
+@keyframes pulseGlow{0%,100%{opacity:.65;transform:scale(.98)}50%{opacity:1;transform:scale(1.02)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(15px)}}
+
+@media(max-width:850px){
+  .nav{display:none}.hero{grid-template-columns:1fr;padding-top:40px}.hero-art{order:-1}
+  .stats{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border-right:0}
+  .cards,.request-grid{grid-template-columns:1fr}.founder{grid-template-columns:190px 1fr}
+}
+@media(max-width:560px){
+  .hero h1{font-size:43px}.section{padding:62px 5%}.subjects{grid-template-columns:1fr}
+  .founder{grid-template-columns:1fr;text-align:center}.founder-photo{max-width:190px;margin:auto}
+  .founder-channel{text-align:left}.profile-card{flex-direction:column;align-items:flex-start}
+  footer{flex-direction:column}.wa-popup{right:14px;bottom:14px;grid-template-columns:auto 1fr}
+  .wa-popup>a{grid-column:1/-1;text-align:center}.support-buttons .btn{width:100%}
+}
+</style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <a class="brand" href="#top">
+    <img src="https://i.ibb.co/YTPWddRs/IMG-20260914-WA0007.jpg" alt="ALMate logo" draggable="false">
+    <span>ALMate.edu.lk</span>
+  </a>
+  <nav class="nav">
+    <a href="#resources">Resources</a>
+    <a href="#subjects">Subjects</a>
+    <a href="#ai">AI Assistant</a>
+    <a href="#founder">Founder</a>
+  </nav>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">GCE A/L • SRI LANKA</p>
+    <h1>Learn smarter with <span class="accent">ALMate.</span></h1>
+    <p class="hero-desc">A focused educational resource platform helping Sri Lankan GCE A/L students reach Past Papers and Marking Schemes in Tamil, English and Sinhala.</p>
+    <div class="hero-buttons">
+      <a class="btn btn-primary" href="#resources">Explore Resources</a>
+      <a class="btn btn-light" href="#how">How to Request</a>
+    </div>
+  </div>
+  <div class="hero-art">
+    <img src="https://i.ibb.co/mCzcbKTp/Picsart-26-09-20-20-56-44-800.jpg" alt="ALMate Founder and AI banner" draggable="false" oncontextmenu="return false">
+  </div>
+</section>
+
+<section class="stats">
+  <div class="stat"><strong id="studentCount">10,280</strong><span>Students Supported</span></div>
+  <div class="stat"><strong>3,000+</strong><span>Resources</span></div>
+  <div class="stat"><strong>3</strong><span>Languages</span></div>
+  <div class="stat"><strong>44</strong><span>A/L Subjects</span></div>
+</section>
+
+<section class="section reveal" id="resources">
+  <div class="section-head">
+    <p class="eyebrow">CURRENTLY AVAILABLE</p>
+    <h2>GCE A/L Past Papers &amp; Marking Schemes</h2>
+    <p>Our current resource focus is Past Papers and Marking Schemes. Availability depends on the subject, year, language and official release status.</p>
+  </div>
+  <div class="cards">
+    <article class="card"><span class="icon">📄</span><h3>Past Papers</h3><p>Access available GCE A/L past-paper resources through the official resource-support process.</p></article>
+    <article class="card"><span class="icon">✓</span><h3>Marking Schemes</h3><p>Find marking schemes where they have been officially released and are available.</p></article>
+    <article class="card"><span class="icon">🌐</span><h3>Three Languages</h3><p>Resources are supported in Tamil, English and Sinhala.</p></article>
+  </div>
+</section>
+
+<section class="section soft reveal" id="how">
+  <div class="section-head">
+    <p class="eyebrow">REQUEST PROCESS</p>
+    <h2>Request one resource at a time</h2>
+    <p>Keep every request complete and simple so students can receive support efficiently.</p>
+  </div>
+  <div class="request-grid">
+    <div class="steps">
+      <div class="step"><b>01</b><span>Select your subject.</span></div>
+      <div class="step"><b>02</b><span>Give the year and language.</span></div>
+      <div class="step"><b>03</b><span>Specify <strong>Paper</strong> or <strong>Scheme</strong>.</span></div>
+      <div class="step"><b>04</b><span>Send <strong>one</strong> complete request at a time in the official WhatsApp group.</span></div>
+    </div>
+    <div class="example">
+      <small>Example request</small>
+      <code>Chemistry | 2025 | Tamil | Paper</code>
+      <a class="btn btn-wa" href="https://chat.whatsapp.com/Ggj1uYwOeyG3d7LEmct7aX" target="_blank" rel="noopener">WhatsApp • Join Official Group</a>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal" id="subjects">
+  <div class="section-head">
+    <p class="eyebrow">RESOURCE DATABASE</p>
+    <h2>44 A/L Subjects</h2>
+    <p>A compact subject directory — designed to stay easy to scan on both mobile and desktop.</p>
+  </div>
+  <div class="subjects">
+<div class="subject"><b>01</b><span>Accounting</span></div><div class="subject"><b>02</b><span>Agriculture</span></div><div class="subject"><b>03</b><span>Agro Technology</span></div><div class="subject"><b>04</b><span>Arabic</span></div><div class="subject"><b>05</b><span>Art</span></div><div class="subject"><b>06</b><span>Bio Systems Technology</span></div><div class="subject"><b>07</b><span>Bio-Resource Technology</span></div><div class="subject"><b>08</b><span>Biology</span></div><div class="subject"><b>09</b><span>Buddhism</span></div><div class="subject"><b>10</b><span>Buddhist Civilization</span></div><div class="subject"><b>11</b><span>Business Statistics</span></div><div class="subject"><b>12</b><span>Business Studies</span></div><div class="subject"><b>13</b><span>Chemistry</span></div><div class="subject"><b>14</b><span>Chinese</span></div><div class="subject"><b>15</b><span>Christian Civilization</span></div><div class="subject"><b>16</b><span>Christianity</span></div><div class="subject"><b>17</b><span>Combined Mathematics</span></div><div class="subject"><b>18</b><span>Common General Test</span></div><div class="subject"><b>19</b><span>Drama & Theatre</span></div><div class="subject"><b>20</b><span>Economics</span></div><div class="subject"><b>21</b><span>Electrical, Electronic and Information Technology</span></div><div class="subject"><b>22</b><span>Engineering Technology</span></div><div class="subject"><b>23</b><span>English</span></div><div class="subject"><b>24</b><span>French</span></div><div class="subject"><b>25</b><span>General English</span></div><div class="subject"><b>26</b><span>Geography</span></div><div class="subject"><b>27</b><span>German</span></div><div class="subject"><b>28</b><span>GIT</span></div><div class="subject"><b>29</b><span>Higher Mathematics</span></div><div class="subject"><b>30</b><span>Hindu Civilization</span></div><div class="subject"><b>31</b><span>Hinduism</span></div><div class="subject"><b>32</b><span>ICT</span></div><div class="subject"><b>33</b><span>Islam</span></div><div class="subject"><b>34</b><span>Islam Civilization</span></div><div class="subject"><b>35</b><span>Japanese</span></div><div class="subject"><b>36</b><span>Korean</span></div><div class="subject"><b>37</b><span>Media Studies</span></div><div class="subject"><b>38</b><span>Music</span></div><div class="subject"><b>39</b><span>Physics</span></div><div class="subject"><b>40</b><span>Political Science</span></div><div class="subject"><b>41</b><span>Russian</span></div><div class="subject"><b>42</b><span>Science for Technology</span></div><div class="subject"><b>43</b><span>Sinhala</span></div><div class="subject"><b>44</b><span>Tamil</span></div>
+  </div>
+</section>
+
+<section class="section soft reveal">
+  <div class="section-head">
+    <p class="eyebrow">OFFICIAL GROUP GUIDELINES</p>
+    <h2>Keep the community focused</h2>
+  </div>
+  <div class="notice">
+    <p>• Request only one paper/resource at a time with complete details.</p>
+    <p>• Keep the official WhatsApp group for resource access and student support.</p>
+    <p>• Avoid unnecessary, repeated or unrelated messages.</p>
+    <p>• Do not disturb other students or interfere with automated/bot resource operations.</p>
+    <p>• Some resources may not be available when the relevant official authority has not released them.</p>
+    <p>• Activity that disrupts students or automated operations may result in removal from the group.</p>
+  </div>
+</section>
+
+<section class="section reveal" id="ai">
+  <div class="ai">
+    <p class="eyebrow">IN DEVELOPMENT</p>
+    <h2>AI Assistant</h2>
+    <div class="status">Launching Very Soon</div>
+    <p>The future ALMate AI Assistant is being developed for student questions, explanations, paper analysis and other useful learning tools. These AI features are not currently live.</p>
+  </div>
+</section>
+
+<section class="section reveal" id="founder">
+  <div class="founder">
+    <a class="founder-photo" href="https://www.gareeb.lk" target="_blank" rel="noopener">
+      <img src="https://i.ibb.co/HpXyW7v3/Picsart-26-09-20-21-00-52-898.jpg" alt="MNN Gareeb" draggable="false" oncontextmenu="return false">
+    </a>
+    <div class="founder-copy">
+      <p class="eyebrow">FOUNDER</p>
+      <h2>MNN Gareeb</h2>
+      <p>Founder of ALMate.edu.lk, working toward a more accessible and practical resource experience for Sri Lankan GCE A/L students.</p>
+      <a class="btn btn-light" href="https://www.gareeb.lk" target="_blank" rel="noopener">Check Founder Profile</a>
+      <div class="founder-channel">
+        <h3>Gareeb Tech</h3>
+        <p>Follow the Founder's official WhatsApp Channel for updates and future projects.</p>
+        <a class="btn btn-wa" href="https://whatsapp.com/channel/0029VbBXERDIyPtTebk07L2p" target="_blank" rel="noopener">WhatsApp • Follow Channel</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal">
+  <div class="support-box">
+    <p class="eyebrow">SUPPORT FUTURE DEVELOPMENT</p>
+    <h2>Help us build useful A/L learning tools.</h2>
+    <p>Future ALMate projects, including AI-powered student tools, require time, development resources and investment. If you find this platform useful and would like to support its continued development, you can contribute voluntarily.</p>
+    <div class="support-buttons">
+      <a class="btn btn-primary" href="mailto:Gareebnidhaaul@gmail.com?subject=Support%20ALMate.edu.lk">Donate / Support ALMate</a>
+    </div>
+    <p class="mini-note">Your support can help us continue improving resources and developing future student-focused tools.</p>
+
+    <div class="ad-box">
+      <p class="eyebrow" style="color:#42d69a">EDUCATIONAL ADVERTISING</p>
+      <h3>Reach A/L students through ALMate.</h3>
+      <p>We provide an opportunity to share relevant educational services with our A/L student community. Promote private classes, courses, educational links, learning services and career-focused opportunities.</p>
+      <div class="ad-list">
+        <span class="ad-tag">A/L Private Classes</span>
+        <span class="ad-tag">Courses &amp; Institutes</span>
+        <span class="ad-tag">Educational Links</span>
+        <span class="ad-tag">Career Opportunities</span>
+        <span class="ad-tag">Student Services</span>
+      </div>
+      <p style="margin-bottom:16px"><strong>Community reach:</strong> 20,000+ A/L students</p>
+      <a class="btn btn-wa" href="https://wa.me/94760831346?text=Hello%20ALMate%2C%20I%20am%20interested%20in%20Educational%20Advertising." target="_blank" rel="noopener">WhatsApp • Advertising Enquiries</a>
+    </div>
+
+    <div class="profile-card">
+      <div>
+        <strong>Looking for the founder?</strong>
+        <p>Check the founder profile and official updates.</p>
+      </div>
+      <a class="btn btn-blue" href="https://www.gareeb.lk" target="_blank" rel="noopener">Check Profile</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <strong>ALMate.edu.lk</strong>
+  <span>GCE A/L Past Papers &amp; Marking Schemes • Tamil • English • Sinhala</span>
+</footer>
+
+<!-- WhatsApp popup -->
+<div class="wa-popup" id="waPopup" aria-live="polite">
+  <button class="popup-close" id="popupClose" aria-label="Close">×</button>
+  <div class="wa-icon">☏</div>
+  <div>
+    <strong>Join Official WhatsApp Group</strong>
+    <small>Resource requests &amp; student support</small>
+  </div>
+  <a href="https://chat.whatsapp.com/Ggj1uYwOeyG3d7LEmct7aX" target="_blank" rel="noopener">Join Now</a>
+  <div class="popup-progress" id="popupProgress"></div>
+</div>
+
+<script>
+/* Student counter: base 10,280 + 3 per completed hour */
+(function(){
+  const el=document.getElementById("studentCount");
+  const key="almate_counter_start_v2";
+  let start=localStorage.getItem(key);
+  if(!start){start=Date.now();localStorage.setItem(key,start)}
+  function update(){
+    const hours=Math.floor((Date.now()-Number(start))/3600000);
+    el.textContent=(10280+(hours*3)).toLocaleString();
+  }
+  update();
+  setInterval(update,60000);
+})();
+
+/* Reveal animations */
+(function(){
+  const items=document.querySelectorAll(".reveal");
+  if(!("IntersectionObserver" in window)){
+    items.forEach(x=>x.classList.add("visible"));
+    return;
+  }
+  const observer=new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  },{threshold:.12});
+  items.forEach(x=>observer.observe(x));
+})();
+
+/* WhatsApp popup:
+   appears after 3 seconds, then automatically closes after 3 seconds */
+(function(){
+  const popup=document.getElementById("waPopup");
+  const close=document.getElementById("popupClose");
+  const progress=document.getElementById("popupProgress");
+  let closed=false;
+
+  setTimeout(()=>{
+    if(closed)return;
+    popup.classList.add("show");
+    progress.style.transition="width 3s linear";
+    requestAnimationFrame(()=>{progress.style.width="0%"});
+
+    setTimeout(()=>{
+      if(!closed) popup.classList.remove("show");
+    },3000);
+  },3000);
+
+  close.addEventListener("click",()=>{
+    closed=true;
+    popup.classList.remove("show");
+  });
+})();
+
+/* Prevent simple image dragging/context-menu */
+document.querySelectorAll("img").forEach(img=>{
+  img.addEventListener("dragstart",e=>e.preventDefault());
+  img.addEventListener("contextmenu",e=>e.preventDefault());
+});
+</script>
+
+</body>
+</html>
